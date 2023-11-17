@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         // Agregar el texto al TextView 'article'
         if (!comment.isEmpty()) {
             String currentArticleText = article.getText().toString();
-            String newArticleText = currentArticleText + "\n" + comment;
+            String newArticleText = currentArticleText + "\n"+ "\n"+ comment;
             article.setText(newArticleText);
         }
     }

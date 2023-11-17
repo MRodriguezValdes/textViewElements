@@ -42,14 +42,27 @@
                 android:textAppearance="@android:style/TextAppearance"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/article"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autoLink="web"
+                android:orientation="horizontal">
 
-                android:lineSpacingExtra="@dimen/line_spacing"
-                android:text="@string/article_text" />
+                <TextView
+                    android:id="@+id/leftColumnTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Left Column Text"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/article"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/line_spacing"
+                    android:text="@string/article_text" />
+            </LinearLayout>
             <EditText
                 android:id="@+id/editTextComment"
                 android:layout_width="match_parent"
